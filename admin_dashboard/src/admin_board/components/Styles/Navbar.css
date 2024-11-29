@@ -1,0 +1,61 @@
+/* General styling for the navbar */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  div {
+    box-sizing: border-box;
+  }
+  
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: white;
+    border-bottom: 3px solid #ff6b6b;
+  }
+  
+
+  .navbar h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffc107;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  
+  .navbar div span {
+    margin-right: 15px;
+    font-size: 16px;
+    color: #f8f9fa;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar div span:last-child {
+    margin-right: 0;
+  }
+  
+  
+  .navbar div span:hover {
+    color: #ffc107;
+    transform: scale(1.1);
+  }
+  
+
+  @media (max-width: 768px) {
+    .navbar h2 {
+      font-size: 20px;
+    }
+  
+    .navbar div span {
+      font-size: 14px;
+    }
+  }
+  
