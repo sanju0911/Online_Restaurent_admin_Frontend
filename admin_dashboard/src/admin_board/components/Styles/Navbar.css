@@ -1,61 +1,81 @@
-/* General styling for the navbar */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  div {
-    box-sizing: border-box;
-  }
-  
+/* Container for navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #e2a007; /* Orange background */
+  color: #000; /* Black text color */
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+/* Navbar brand/title */
+.navbar h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer;
+  color: #000; /* Black color for brand/title */
+}
+
+/* Navbar links container */
+.navbar div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Navbar link styling */
+.navbar span {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  color: #000; /* Black text color for links */
+}
+
+/* Navbar link hover effect */
+.navbar span:hover {
+  color: #e2a007; /* Orange text color on hover */
+  background-color: #000; /* Black background color on hover */
+  transform: scale(1.1);
+}
+
+/* Logged out state links */
+.navbar .logged-out span {
+  font-weight: bold;
+  color: #e2a007;
+}
+
+/* Logged in state links */
+.navbar .logged-in span {
+  color: #e2a007;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #343a40;
-    color: white;
-    border-bottom: 3px solid #ff6b6b;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
 
-  .navbar h2 {
-    margin: 0;
-    font-size: 24px;
-    color: #ffc107;
-    font-weight: bold;
-    text-transform: uppercase;
+  .navbar div {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
   }
-  
-  
-  .navbar div span {
-    margin-right: 15px;
-    font-size: 16px;
-    color: #f8f9fa;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .navbar div span:last-child {
-    margin-right: 0;
-  }
-  
-  
-  .navbar div span:hover {
-    color: #ffc107;
-    transform: scale(1.1);
-  }
-  
 
-  @media (max-width: 768px) {
-    .navbar h2 {
-      font-size: 20px;
-    }
-  
-    .navbar div span {
-      font-size: 14px;
-    }
+  .navbar span {
+    font-size: 14px;
   }
-  
+}
+
+/* Custom styles for logout button */
+.navbar span.logout {
+  color: #e74c3c; /* Red color for logout button */
+}
+
+.navbar span.logout:hover {
+  color: #c0392b; 
+}
